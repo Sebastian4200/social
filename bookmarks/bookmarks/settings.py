@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-!+2948*#p1w3tb&jx@=()m=*p!_!p3gt*ue$wr@$!#i-%oa)wq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ALLOWED_HOSTS = []
 
@@ -102,6 +102,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "account.authentication.EmailAuthBackend",
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -119,14 +124,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_REDIRECT_URL = 'dashboard'
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = "dashboard"
+LOGIN_URL = "login"
+LOGOUT_URL = "logout"
