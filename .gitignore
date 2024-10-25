@@ -124,3 +124,5 @@ credentials.txt
 datadump.json
 .ignore
 readme.md
+*.crt
+*.key
