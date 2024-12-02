@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "social_django",
     "django_extensions",
     "images.apps.ImagesConfig",
+    "easy_thumbnails",
 ]
 
 MIDDLEWARE = [
@@ -167,6 +168,7 @@ LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 
+THUMBNAIL_DEBUG = True
 
 SOCIAL_AUTH_FACEBOOK_KEY = env('SOCIAL_AUTH_FACEBOOK_KEY')
 SOCIAL_AUTH_FACEBOOK_SECRET = env('SOCIAL_AUTH_FACEBOOK_SECRET')
